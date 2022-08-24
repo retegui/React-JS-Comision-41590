@@ -1,10 +1,12 @@
+.accesos{
+    margin-right: 25vh;
+}
+
 .barra-navegador{
     background-color: black;
     color: red;
-    border-radius: 20%;
     display: flex;
     align-items: center;
-    justify-content: row-reverse;
 }
 .h3{
     font-family: fantasy;

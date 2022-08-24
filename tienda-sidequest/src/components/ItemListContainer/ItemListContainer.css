@@ -1,0 +1,8 @@
+.provisorio{
+    margin-top:50px;
+    background-color: rgb(30, 255, 0);
+    color: rgb(0, 12, 116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const Contador = ({stock, initial})=>{
+export const Contador = ({stock, initial, agregarProducto})=>{
     const[contador, setContador] = useState (initial);
 
     const incrementar = ()=>{
@@ -17,9 +17,12 @@ export const Contador = ({stock, initial})=>{
     return(
         <div className="provisorio">
             
-            <button onClick={incrementar}>Incrementar</button>
-            <p>Unidades {contador}</p>
-            <button onClick={disminuir}>Disminuir</button>
+            <button onClick={disminuir}>-</button> 
+            <h2>Unid. {contador}</h2>
+            <button onClick={incrementar}>+</button>
+            <button onClick={()=>(agregarProducto(contador))}
+             style={{background: contador>0 ? 'yellow' : 'red'}}>Agregar al carrito</button> 
+
         </div>
     )
 }

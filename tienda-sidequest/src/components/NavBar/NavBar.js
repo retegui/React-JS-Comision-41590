@@ -3,7 +3,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../../assets/img/avatar1.png';
 
 
-function NavBar (){
+export const NavBar = () => {
     return(  
         <div className="barra-navegador">
           <img src={Logo} alt='' height="150px"></img>
@@ -17,5 +17,3 @@ function NavBar (){
           </div>
           )
 }
-
-export default NavBar;

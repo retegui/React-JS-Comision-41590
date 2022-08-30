@@ -1,20 +1,17 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import {NavBar} from './components/NavBar/NavBar';
 import Logo from './assets/img/avatar1.png';
-import { Contador } from './components/Contador/ItemCount';
+import { Landing } from './components/Landing/landing';
+
 
 function App() {
 
-  const agregar = ()=>{
-    console.log('funcion agregar')
-  }
+
   return (
     <div className="App">
       <header className="App-header">
         <NavBar><img src={Logo} alt=''></img></NavBar>   
-        <Contador stock={5} initial={1} agregarProducto={agregar}/>
-        <ItemListContainer />
+        <Landing/>
       </header>
     </div>
   );

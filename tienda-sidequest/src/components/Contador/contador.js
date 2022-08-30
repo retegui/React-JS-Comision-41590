@@ -1,4 +1,8 @@
 import {useState} from "react";
+import arregloStock from '../Landing/landing';
+import '../Contador/contador.css'
+
+// const stock = arregloStockcantidad
 
 export const Contador = ({stock, initial, agregarProducto})=>{
     const[contador, setContador] = useState (initial);
@@ -18,7 +22,7 @@ export const Contador = ({stock, initial, agregarProducto})=>{
         <div className="provisorio">
             
             <button onClick={disminuir}>-</button> 
-            <h2>Unid. {contador}</h2>
+            <p>Unid. {contador}</p>
             <button onClick={incrementar}>+</button>
             <button onClick={()=>(agregarProducto(contador))}
              style={{background: contador>0 ? 'yellow' : 'red'}}>Agregar al carrito</button> 

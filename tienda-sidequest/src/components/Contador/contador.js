@@ -1,8 +1,7 @@
 import {useState} from "react";
-import arregloStock from '../Landing/landing';
 import '../Contador/contador.css'
 
-// const stock = arregloStockcantidad
+
 
 export const Contador = ({stock, initial, agregarProducto})=>{
     const[contador, setContador] = useState (initial);

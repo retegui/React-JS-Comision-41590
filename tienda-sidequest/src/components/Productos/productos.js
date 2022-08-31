@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Contador} from '../Contador/contador';
-import { Landing } from '../Landing/landing';
+
 
 
 const agregar = ()=>{
@@ -19,8 +19,11 @@ export const Productos = ({articulos}) => {
     return (
         <div className='stock'>
             <img src={articulos.imagen} alt="" className='stockImg'/>
-            <p>{articulos.nombre}</p>
-            <Contador stock={articulos.cantidad} initial={1} agregarProducto={agregar}/>
+            <h5>{articulos.nombre}</h5>
+            <p>{articulos.consola}</p>
+            <h5>$ {articulos.precio}</h5>
+            <button>Detalles</button>
+            <Contador stock={articulos.cantidad} initial={0} agregarProducto={agregar}/>
         </div>
     )
 }

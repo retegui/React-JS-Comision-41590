@@ -12,9 +12,11 @@ function App() {
       <header className="App-header">
         <NavBar><img src={Logo} alt=''></img></NavBar>   
         <Landing/>
+        
       </header>
     </div>
   );
 }
 
 export default App;
+/* <Itemdetailcontainer/> */

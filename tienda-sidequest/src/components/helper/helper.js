@@ -1,8 +1,8 @@
-import supermario64 from './../assets/img/supermario64.jpg';
-import pokemonruby from './../assets/img/pokemonruby.jpg';
-import parasite2 from './../assets/img/parasite2.jpg';
+import supermario64 from '../../assets/img/supermario64.jpg';
+import pokemonruby from '../../assets/img/pokemonruby.jpg';
+import parasite2 from '../../assets/img/parasite2.jpg';
 
-export const arregloStock = () =>
+export const itemList = () =>
 
 [ 
     {
@@ -11,7 +11,7 @@ export const arregloStock = () =>
         consola: "Nintendo 64",
         desc: "Suelto",
         precio: 6175,
-        imagen: supermario64 ,
+        imagen: [supermario64] ,
         cantidad:5
     },
     {
@@ -20,7 +20,7 @@ export const arregloStock = () =>
         consola: "Gameboy Advance",
         desc: "Suelto",
         precio: 8614,
-        imagen: pokemonruby,
+        imagen: [pokemonru]by,
         cantidad:6
     },
 
@@ -34,3 +34,12 @@ export const arregloStock = () =>
         cantidad:4
     },
 ]
+
+const getFetch = new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+        resolve(itemList)
+        reject(err => console.log(err))
+    },3000)
+})
+
+export default getFetch

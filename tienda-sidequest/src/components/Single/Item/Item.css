@@ -1,12 +1,12 @@
 .product{
     
     background-color: rgb(29, 28, 28);
-    color: #fafafa;
+    color: #000000;
     text-align: center;
     padding-bottom: 15px;
     
 }
 
-.product img {
+.product imagen {
   width: 100%;
 }

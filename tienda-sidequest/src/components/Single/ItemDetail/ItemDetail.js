@@ -22,15 +22,14 @@ console.log(data)
             loading ?  <h2>Cargando...</h2>
             :
             <div className="item-detail">
-                    <img src={data.img} alt="" />
-                    <h2>{data.name}</h2>
-                    <h3>{data.price}</h3>
+                    <img src={data.imagen} alt="" />
+                    <h2>{data.nombre}</h2>
+                    <h3>${data.precio}</h3>
 
                 <div className="detail">
-                        <h4>{data.year}</h4>
-                        <p>{data.genre}</p>
+                        <h4>{data.consola}</h4>                        
                 </div>
-                    <p>{data.description}</p>
+                    <p>{data.descripcion}</p>
 
                 </div>
 

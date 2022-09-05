@@ -24,7 +24,7 @@ const ItemList = () => {
         
         <div  className="grid-product" >
             {data.map(data => (
-                    <Item key={data.name} data={data}/>
+                    <Item key={data.nombre} data={data}/>
             ))}
         </div>
 

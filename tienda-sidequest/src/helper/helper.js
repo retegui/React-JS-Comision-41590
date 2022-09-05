@@ -2,9 +2,7 @@ import supermario64 from '../assets/img/supermario64.jpg'
 import pokemonruby from '../assets/img/pokemonruby.jpg';
 import parasite2 from '../assets/img/parasite2.jpg';
 
-export const itemList = () =>
-
-[ 
+const productos = [ 
     {
         id: 1,
         nombre: "Super Mario 64",
@@ -35,11 +33,11 @@ export const itemList = () =>
     },
 ]
 
-const getFetch = new Promise((resolve, reject) =>{
-    setTimeout(()=>{
-        resolve(itemList)
+const getFetch = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(productos)
         reject(err => console.log(err))
-    },3000)
+    }, 3000)
 })
 
 export default getFetch

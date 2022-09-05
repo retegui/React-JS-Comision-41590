@@ -20,7 +20,7 @@ export const itemList = () =>
         consola: "Gameboy Advance",
         desc: "Suelto",
         precio: 8614,
-        imagen: [pokemonru]by,
+        imagen: [pokemonruby],
         cantidad:6
     },
 

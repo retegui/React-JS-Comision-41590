@@ -1,6 +1,6 @@
-import supermario64 from '../../assets/img/supermario64.jpg';
-import pokemonruby from '../../assets/img/pokemonruby.jpg';
-import parasite2 from '../../assets/img/parasite2.jpg';
+import supermario64 from '../assets/img/supermario64.jpg'
+import pokemonruby from '../assets/img/pokemonruby.jpg';
+import parasite2 from '../assets/img/parasite2.jpg';
 
 export const itemList = () =>
 

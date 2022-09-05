@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
 import getFetch from '../../../helper/helper.js'
-import Item from '../../single/Item/Item.jsx'
+import Item from '../../Single/Item/Item'
 import './ItemList.css'
 
 const ItemList = () => {

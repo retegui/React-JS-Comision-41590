@@ -17,7 +17,7 @@ useEffect(()=> {
 console.log(data)
         return (
             <div className="item-container">
-            <h1>Item Detail Container</h1>
+            <h1>Detalle de prodcutos</h1>
         {
             loading ?  <h2>Cargando...</h2>
             :
@@ -29,7 +29,7 @@ console.log(data)
                 <div className="detail">
                         <h4>{data.consola}</h4>                        
                 </div>
-                    <p>{data.descripcion}</p>
+                    <p>{data.desc}</p>
 
                 </div>
 

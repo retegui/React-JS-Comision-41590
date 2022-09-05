@@ -15,7 +15,7 @@ const ItemList = () => {
     }, [])
   return (
     <>
-        <h1> Item List Container</h1>
+        <h1> Productos</h1>
 
     {
         loading ? <h2>Cargando...</h2> 

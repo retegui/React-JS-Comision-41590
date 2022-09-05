@@ -7,7 +7,7 @@ const agregar = ()=>{
     console.log('funcion agregar')
   }
 
-export const Productos = ({articulos}) => {
+export const Product = ({articulos}) => {
     const [enCarrito, setenCarrito] = useState(0);
 
     const incrementar = ()=>{

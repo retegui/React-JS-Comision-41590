@@ -22,7 +22,7 @@ console.log(data)
             loading ?  <h2>Cargando...</h2>
             :
             <div className="item-detail">
-                    <img src={data.imagen} alt="" />
+                    <img src={data.img} alt="" />
                     <h2>{data.nombre}</h2>
                     <h3>${data.precio}</h3>
 

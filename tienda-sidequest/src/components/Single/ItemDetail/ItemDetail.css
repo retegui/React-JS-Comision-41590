@@ -11,8 +11,8 @@ h2{
     color: #000000;
 }
 
-.item-detail image {
-    width: 100%;
+.item-detail img {
+    width: 500px;
 }
 
 .detail {

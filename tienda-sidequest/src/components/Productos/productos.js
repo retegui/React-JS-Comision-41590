@@ -18,7 +18,7 @@ export const Productos = ({articulos}) => {
 
     return (
         <div className='stock'>
-            <img src={articulos.imagen} alt="" className='stockImg'/>
+            <img src={articulos.img} alt="" className='stockImg'/>
             <h5>{articulos.nombre}</h5>
             <p>{articulos.consola}</p>
             <h5>$ {articulos.precio}</h5>

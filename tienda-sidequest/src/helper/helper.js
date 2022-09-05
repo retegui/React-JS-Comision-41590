@@ -9,7 +9,7 @@ const productos = [
         consola: "Nintendo 64",
         desc: "Suelto",
         precio: 6175,
-        imagen: [supermario64] ,
+        img: [supermario64] ,
         cantidad:5
     },
     {
@@ -18,7 +18,7 @@ const productos = [
         consola: "Gameboy Advance",
         desc: "Suelto",
         precio: 8614,
-        imagen: [pokemonruby],
+        img: [pokemonruby],
         cantidad:6
     },
 
@@ -28,7 +28,7 @@ const productos = [
         consola: "Playstation",
         desc: "En caja sin manual",
         precio: 10090,
-        imagen: parasite2,
+        img: parasite2,
         cantidad:4
     },
 ]

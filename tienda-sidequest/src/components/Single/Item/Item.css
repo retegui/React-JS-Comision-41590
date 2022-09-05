@@ -1,5 +1,5 @@
 .product{
-    width: 150px;
+    width: 100px;
     background-color: rgb(29, 28, 28);
     color: #000000;
     text-align: center;
@@ -8,5 +8,5 @@
 }
 
 .product img {
-  width: 50%;
+  width: 150px;
 }

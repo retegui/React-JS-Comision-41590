@@ -1,6 +1,6 @@
 import {useState} from "react";
 import '../Contador/contador.css'
-import {Productos} from '../Productos/productos'
+
 
 
 

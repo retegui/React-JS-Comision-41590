@@ -24,12 +24,12 @@ console.log(data)
             <div className="item-detail">
                     <img src={data.img} alt="" />
                     <h2>{data.nombre}</h2>
-                    <h3>${data.precio}</h3>
+                    <h2>${data.precio}</h2>
 
                 <div className="detail">
-                        <h4>{data.consola}</h4>                        
+                        <h3>{data.consola}</h3>                        
                 </div>
-                    <p>{data.desc}</p>
+                    <h4>{data.desc}</h4>
 
                 </div>
 

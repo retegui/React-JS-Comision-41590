@@ -7,7 +7,7 @@ const productos = [
         id: 1,
         nombre: "Super Mario 64",
         consola: "Nintendo 64",
-        desc: "Suelto",
+        desc: "Super Mario 64 is a 1996 platform game for the Nintendo 64. Developed by Nintendo Entertainment Analysis and Development and published by Nintendo, it is the first Super Mario game to feature 3D gameplay, combining traditional Super Mario gameplay, visual style, and characters in a large open world. ",
         precio: 6175,
         img: [supermario64] ,
         cantidad:5

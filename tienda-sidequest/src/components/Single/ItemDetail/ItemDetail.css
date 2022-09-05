@@ -2,17 +2,17 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 150px;
+    width: 500px;
     text-align:center;
     color: #000000;
 }
 
 h2{
-    color: #000000;
+    color: #ff0000;
 }
 
 .item-detail img {
-    width: 500px;
+    width: 100%;
 }
 
 .detail {

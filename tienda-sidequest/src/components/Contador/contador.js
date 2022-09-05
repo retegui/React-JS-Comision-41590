@@ -22,7 +22,7 @@ export const Contador = ({stock, initial, agregarProducto})=>{
         <div className="provisorio">
             
             <button onClick={disminuir}>-</button> 
-            <p>Unid. {contador}</p>
+            <h5>Unid. {contador}</h5>
             <button onClick={incrementar}>+</button>
             <button onClick={()=>(agregarProducto(contador))}
              style={{background: contador>0 ? 'yellow' : 'red'}}>Agregar al carrito</button> 

@@ -1,8 +1,7 @@
 .grid-product {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: .5fr .5fr .5fr;
     gap: 20px;
-    width: 60%;
     }
 
 h1, h2 {

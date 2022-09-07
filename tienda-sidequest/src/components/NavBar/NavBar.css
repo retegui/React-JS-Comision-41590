@@ -1,15 +1,28 @@
 .accesos{
-    margin-right: 10vh;
-    margin-left: 5px;
-    font-size: 40px;
+    margin-right: 15vh;
+    margin-left: 10px;
+    font-size: 50px;
 }
 
-.barra-navegador{
+.nav-container{
     background-color: black;
     color: red;
     display: flex;
+    flex-direction: ROW;
     align-items: center;
+    justify-content: center;
+    width: 1fr;
+    
 }
 .h3{
     font-family: fantasy;
+}
+.nav-brand{
+    width: 100px;
+}
+.navegacion{
+    width: auto;
+    display: flex;
+    font-size: 25px;
+    margin-right: 5px;
 }

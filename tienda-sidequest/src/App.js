@@ -1,21 +1,42 @@
 import './App.css';
-import {NavBar} from './components/NavBar/NavBar';
-import Logo from './assets/img/avatar1.png';
-import ItemListContainer from './components/Container/ItemListContainer/ItemListContainer'
-import ItemDetail from './components/Single/ItemDetail/ItemDetail'
+import React from 'react';
+
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { NavBar } from './components/NavBar/NavBar';
+import { ItemDetailContainer } from './components/ItemDetailContainer/itemDetailContainer';
+import { BrowserRouter,Routes,Route, Navigate } from 'react-router-dom';
+import { CartContainer } from './components/CartContainer/CartContainer';
+import Logo from './assets/img/logo.png';
+import { Parallax} from './components/Parallax/Parallax';
+import {Footer} from './components/Footer/Footer';
+import { Mantenimiento } from './components/Mantenimiento/Mantenimiento';
+ 
 
 
 function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar><img src={Logo} alt=''></img></NavBar>   
-        <ItemListContainer/>
-        <ItemDetail/> 
-     </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div>
+          <NavBar><img src={Logo} alt=''></img></NavBar> 
+
+          <Routes>
+            <Route path='/' element={<ItemListContainer />}/>
+            <Route path="/productos/:tipoProducto" element={<ItemListContainer />}/>
+            <Route path="/item/:productId" element={<ItemDetailContainer/>}/>
+            <Route path="/cart" element={<CartContainer/>}/>
+            <Route path='*' element={<ItemListContainer />}/>
+          </Routes>        
+        </div>
+        <div>
+          {/* <Parallax/> */}
+          <Footer/>
+
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

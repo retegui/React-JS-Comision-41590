@@ -1,0 +1,46 @@
+.footer{
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+
+.newsletter{
+    background-color:black;
+    color:white;
+}
+
+
+.icon-medios{
+    margin-bottom: 5px;
+}
+.form-news{
+    margin-bottom: 20px;
+    color: white;
+}
+.form-input{
+    background-color: rgb(92, 88, 88);
+    padding: 15px 10px;
+    border: white;
+    border-style:groove;
+    color: whitesmoke;
+    width: 75%;
+}
+.boton-enviar{
+    background-color: rgb(121, 19, 19);
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    }
+
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+a:hover, a:active{
+    color: rgb(255, 0, 0);
+  }
+h3:hover, h3:active{
+    color:red
+}

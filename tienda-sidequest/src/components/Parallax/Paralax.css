@@ -1,0 +1,26 @@
+.parallax {
+	color: whitesmoke;
+ 	background-attachment: fixed;
+  	background-position:bottom;
+  	background-repeat:no-repeat;
+  	background-size:cover;
+	border-color: black;
+	font-family:'Roboto', sans-serif;
+	text-align:justify;
+	text-underline-position:auto;
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	padding: 100px;
+	position:relative; 
+	flex-wrap: wrap;
+	overflow:hidden;
+		}
+.parallax-inicio{
+    height: 75px;
+ }
+ .parallax-medio{
+     height: 300px;
+ }
+.parallax-text{
+    font-size: 30px; }

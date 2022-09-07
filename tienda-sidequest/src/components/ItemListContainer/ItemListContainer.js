@@ -5,6 +5,7 @@ import { arregloProductos } from "../../helper/helper";
 // import { ItemCount } from "../ItemCount/ItemCount"
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import sor from '../../assets/img/sor.gif'
 
 export const ItemListContainer = ()=>{
     const {tipoProducto} = useParams();
@@ -32,8 +33,8 @@ export const ItemListContainer = ()=>{
 
     console.log('productos', productos)
     return(
-        <div className="item-list-container">
-            <p>item list container</p>
+        <div className="item-list-container" >
+            <p>Todas las categorias</p>
             <ItemList items={productos}/>
         </div>
     )

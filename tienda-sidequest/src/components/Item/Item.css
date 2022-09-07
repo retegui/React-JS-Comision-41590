@@ -11,7 +11,7 @@
   align-items: center;
 }
 .tarjeta-producto h4, p{
-  margin: 2ox;
+  margin: 2px;
   font-size: 20px;
   color: #000000;
 }
@@ -19,10 +19,10 @@
   width: 100%;
 }
 .boton-ver{
-  font-size: 10px;
+  font-size: 20px;
   padding: 2px;
   border-radius: 5px;
-  background-color: #243746;
+  background-color: #bb1111;
   color: white;
   margin: 2px;
 }

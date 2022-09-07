@@ -2,6 +2,7 @@ import { CartWidget } from "../CartWidget/CartWidget"
 import './NavBar.css';
 import logo from '../../assets/img/logo.png';
 import {NavLink, Link} from 'react-router-dom';
+import { Mantenimiento } from "../Mantenimiento/Mantenimiento";
 
 export const NavBar = () =>{
     return(
@@ -21,7 +22,7 @@ export const NavBar = () =>{
                 <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
                  to="/productos/Playstation">Playstation</NavLink>
             </div>
-            <div class="d-flex" className="botonbusqueda container-fluid">
+            <div class="d-flex" className="botonBusqueda container-fluid">
                 <input  type="search" placeholder="¿A que queres jugar?" aria-label="Search"></input>
                 <button type="submit">BUSCAR</button>
             </div>

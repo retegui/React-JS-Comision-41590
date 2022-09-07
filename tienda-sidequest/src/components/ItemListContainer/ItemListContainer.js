@@ -34,7 +34,7 @@ export const ItemListContainer = ()=>{
     console.log('productos', productos)
     return(
         <div className="item-list-container" >
-            <p>Todas las categorias</p>
+            <p>Videojuegos</p>
             <ItemList items={productos}/>
         </div>
     )

@@ -30,6 +30,7 @@ export const ItemListContainer = ()=>{
             } else{
                 const nuevaLista = resultado.filter(item=>item.empresa === tipoProducto);
                 setProductos(nuevaLista)
+                setLoading(false) 
             }
         })
     },[tipoProducto])

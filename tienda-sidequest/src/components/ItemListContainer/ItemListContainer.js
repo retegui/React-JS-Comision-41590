@@ -6,11 +6,13 @@ import { arregloProductos } from "../../helper/helper";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import sor from '../../assets/img/sor.gif'
+import { SpinnerDotted } from 'spinners-react';
 
 export const ItemListContainer = ()=>{
     const {tipoProducto} = useParams();
     console.log('tipoProducto',tipoProducto);
 
+    const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState([]);
 
     const promesa = new Promise((resolve, reject)=>{
@@ -24,6 +26,7 @@ export const ItemListContainer = ()=>{
         promesa.then(resultado=>{
             if(!tipoProducto){
                 setProductos(resultado)
+                setLoading(false) 
             } else{
                 const nuevaLista = resultado.filter(item=>item.empresa === tipoProducto);
                 setProductos(nuevaLista)
@@ -34,8 +37,15 @@ export const ItemListContainer = ()=>{
     console.log('productos', productos)
     return(
         <div className="item-list-container" >
-            <p>Videojuegos</p>
+            <p>Videojuegos</p>{
+
+           loading ? <div> 
+            <SpinnerDotted size="300px" color="red"/>
+            <h2>Cargando</h2>
+            </div>
+           :
             <ItemList items={productos}/>
+        }
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 import Logo from './assets/img/logo.png';
 import { Parallax} from './components/Parallax/Parallax';
 import {Footer} from './components/Footer/Footer';
-import { Mantenimiento } from './components/Mantenimiento/Mantenimiento';
+import { CartProvider } from './context/CartContext.js';
  
 
 
@@ -17,26 +17,28 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <div>
-          <NavBar><img src={Logo} alt=''></img></NavBar> 
+    <CartProvider>
+      <BrowserRouter>
+        <div className="App">
+          <div>
+            <NavBar><img src={Logo} alt=''></img></NavBar> 
 
-          <Routes>
-            <Route path='/' element={<ItemListContainer />}/>
-            <Route path="/productos/:tipoProducto" element={<ItemListContainer />}/>
-            <Route path="/item/:productId" element={<ItemDetailContainer/>}/>
-            <Route path="/cart" element={<CartContainer/>}/>
-            <Route path='*' element={<ItemListContainer />}/>
-          </Routes>        
-        </div>
-        <div>
-          {/* <Parallax/> */}
-          <Footer/>
+            <Routes>
+              <Route path='/' element={<ItemListContainer />}/>
+              <Route path="/productos/:tipoProducto" element={<ItemListContainer />}/>
+              <Route path="/item/:productId" element={<ItemDetailContainer/>}/>
+              <Route path="/cart" element={<CartContainer/>}/>
+              <Route path='*' element={<ItemListContainer />}/>
+            </Routes>        
+          </div>
+          <div>
+            {/* <Parallax/> */}
+            <Footer/>
 
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartProvider>  
   );
 }
 

@@ -6,7 +6,7 @@ import './CartContainer.css'
 import {Link} from 'react-router-dom';
 
 export const CartContainer = () => {
-  const {productCartList, clearProductCartList} = useContext(CartContext);
+  const {productCartList, clearProductCartList, getTotalPrice} = useContext(CartContext);
 
   return (
     <div className='contenedorCarrito'>
@@ -22,7 +22,7 @@ export const CartContainer = () => {
               
             }
             <hr/>
-            <div>Total compra ${0}.00</div>
+            <div>Total compra ${getTotalPrice()}.00</div>
             <button onClick={clearProductCartList}>Vaciar carrito</button>
             <Link to="/Mantenimiento">
                     <button>Finalizar compra</button>

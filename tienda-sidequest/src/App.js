@@ -10,6 +10,7 @@ import Logo from './assets/img/logo.png';
 import { Parallax} from './components/Parallax/Parallax';
 import {Footer} from './components/Footer/Footer';
 import { CartProvider } from './context/CartContext.js';
+import { Mantenimiento } from './components/Mantenimiento/Mantenimiento';
  
 
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/item/:productId" element={<ItemDetailContainer/>}/>
               <Route path="/cart" element={<CartContainer/>}/>
               <Route path='*' element={<ItemListContainer />}/>
+              <Route path='/mantenimiento' element={<Mantenimiento />}/>
             </Routes>        
           </div>
           <div>

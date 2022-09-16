@@ -21,6 +21,7 @@ export const NavBar = () =>{
                  to="/productos/Sega">Sega</NavLink>
                 <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
                  to="/productos/Playstation">Playstation</NavLink>
+                 
             </div>
             <div class="d-flex" className="botonBusqueda container-fluid">
                 <input  type="search" placeholder="¿A que queres jugar?" aria-label="Search"></input>

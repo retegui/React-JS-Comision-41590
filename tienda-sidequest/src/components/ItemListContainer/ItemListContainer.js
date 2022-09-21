@@ -1,41 +1,50 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import './ItemListContainer.css';
-import { arregloProductos } from "../../helper/helper";
-// import { ItemCount } from "../ItemCount/ItemCount"
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import sor from '../../assets/img/sor.gif'
 import { SpinnerDotted } from 'spinners-react';
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { basededatos } from "../../utils/firebase";
+
 
 export const ItemListContainer = ()=>{
-    const {tipoProducto} = useParams();
-    console.log('tipoProducto',tipoProducto);
-
+    const {consola} = useParams();
     const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState([]);
 
-    const promesa = new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve(arregloProductos);
-            
-        }, 2000);
-    })
-
     useEffect(()=>{
-        promesa.then(resultado=>{
-            if(!tipoProducto){
-                setProductos(resultado)
-                setLoading(false) 
-            } else{
-                const nuevaLista = resultado.filter(item=>item.empresa === tipoProducto);
-                setProductos(nuevaLista)
-                setLoading(false) 
-            }
-        })
-    },[tipoProducto])
+        const getData = async()=>{
+            try{  
+                let queryRef = ""
 
-    console.log('productos', productos)
+                if(!consola){
+                    queryRef = collection(basededatos,"Items");
+                    
+                } else{
+                    queryRef = query(collection(basededatos,"Items"),where("empresa","==",consola))
+                    
+                }
+            const response = await getDocs(queryRef);
+            const datos = response.docs.map(doc=>{
+                const newDoc = {
+                    ...doc.data(),
+                     id:doc.id}
+                return newDoc;
+                });
+                setProductos(datos)
+                setLoading(false) 
+                    
+
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+        getData()
+        
+
+    },[consola])
+
     return(
         <div className="item-list-container" >
             <p>Videojuegos</p>{

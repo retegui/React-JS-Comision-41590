@@ -5,7 +5,7 @@ import amex from'../../assets/img/amex.png'
 import banelco from'../../assets/img/banelco.png'
 import mercadoenvios from'../../assets/img/mercado-envios.png'
 import './Footer.css'
-import { Mantenimiento } from '../Mantenimiento/Mantenimiento'
+
 
 export const Footer = ()=>{
 

@@ -15,7 +15,7 @@ export const CartWidget = ()=>{
                 <img src={Carrito} alt="" style={{width:30}}/>
               </Link>
               <span style={{backgroundColor: 'black', borderRadius:"20%", width:"20px", heigth:"20px", fontSize:"20px", color:"white"}}>{getTotalProducts()}</span>
-            
+              
            </>
           } 
           </div> 

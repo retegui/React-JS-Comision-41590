@@ -13,15 +13,15 @@ export const CartContainer = () => {
   const sendpedido = (e)=>{
     e.preventDefault();
     const pedido = {
-      buyer: {
-        name: e.target[0].value,
-        phone:e.target[1].value,
+      comprador: {
+        nombre: e.target[0].value,
+        telefono:e.target[1].value,
         email:e.target[2].value
       },
       items: productCartList,
       total: getTotalPrice()
     }
-    //crear referencia en la base de datos de donde voy a guardar el documento
+
     const queryRef = collection(basededatos,"pedidos");
     //agregamos el documento
     addDoc(queryRef, pedido).then(respuesta=>setIdpedido(respuesta.id))
@@ -33,7 +33,7 @@ export const CartContainer = () => {
     updateDoc(queryRef, {
       empresa: "Playstation",
       pictureUrl: "https://firebasestorage.googleapis.com/v0/b/tienda-sidequest.appspot.com/o/fifa98.jpg?alt=media&token=b97af665-15cf-4324-ad22-cc6ccec37f0c",
-      precio:1090,
+      precio:5000,
       nombre:"Fifa 98"
     }).then(()=>console.log("producto actualizado"))
   }
@@ -54,13 +54,17 @@ export const CartContainer = () => {
             <hr/>
             <div>Total compra ${getTotalPrice()}.00</div>
             <button onClick={clearProductCartList}>Vaciar carrito</button>
+
+            <div className='contenedorCompra'>
             <form onSubmit={sendpedido}>
-              <input type="text" placeholder='nombre'/>
-              <input type="text" placeholder='telefono'/>
-              <input type="email" placeholder='email'/>
-              <button type='submit'>Enviar pedido</button>
+
+              <div><input className='datosCompra' type="text" placeholder='Nombre'/></div>
+              <div><input className='datosCompra' type="text" placeholder='Telefono'/></div>
+              <div><input className='datosCompra' type="email" placeholder='Email'/></div>
+              <div><button className='datosCompra' type='submit'>Enviar pedido</button></div>
             </form>
-            <button onClick={updatepedido}>actualizar</button>
+            <button onClick={updatepedido}>Refrescar</button>
+            </div>
           </>
                     :
           <p>No has agregado productos</p>
